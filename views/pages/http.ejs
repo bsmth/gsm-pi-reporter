@@ -9,21 +9,26 @@
 <% include ../partials/nav.ejs %>
 
 <div class="container">
-<h2>Latest Results</h2>
+<h2>Last 50 log entries</h2>
 
 <div class="table-responsive">
   <table class="table table-striped table-sm">
     <thead>
       <tr>
         <th>Timestamp</th>
-        <th>Info</th>
+        <th>Details</th>
       </tr>
     </thead>
     <tbody>
-      <% results.slice().reverse().forEach(function(r) { %>
+      <% results.slice(0, 50).reverse().forEach(function(r) { %>
       <tr>
         <td><%= r.timestamp %></td>
-        <td><%= r.description %></td>
+        <% var desc = JSON.parse(r.description)
+        if (desc.low_light_alert) { %>
+        <td class="alert alert-danger" role="alert">Warning, light levels of <%= desc.low_light_alert %> detected</td>
+        <% } else { %>
+        <td class="alert alert-light" role="alert">Latest Reading: <%= desc.latest_reading %></td>
+        <% } %>
       </tr>
       <% }); %>
     </tbody>
