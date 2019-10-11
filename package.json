@@ -1,5 +1,5 @@
 {
-  "name": "januarycolaorder",
+  "name": "Pi GSM Reporter",
   "version": "1.0.0",
   "description": "A basic express app",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bsmth/JanuaryColaOrder.git"
+    "url": "git+https://github.com/bsmth/gsm-pi-reporter.git"
   },
   "author": "bsmth",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bsmth/JanuaryColaOrder/issues"
+    "url": "https://github.com/bsmth/gsm-pi-reporter/issues"
   },
-  "homepage": "https://github.com/bsmth/JanuaryColaOrder#readme",
+  "homepage": "https://github.com/bsmth/gsm-pi-reporter#readme",
   "dependencies": {
     "ejs": "^2.7.1",
     "express": "^4.17.1",
