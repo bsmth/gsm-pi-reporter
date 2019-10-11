@@ -1,5 +1,5 @@
 {
-  "name": "Pi GSM Reporter",
+  "name": "Pi-GSM-Reporter",
   "version": "1.0.0",
   "description": "A basic express app",
   "main": "index.js",
