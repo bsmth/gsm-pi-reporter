@@ -33,7 +33,7 @@ express()
       res.send("Error " + err);
     }
   })
-  .post('/', async (req, res) => {
+  .post('/lux', async (req, res) => {
     try {
       var description = JSON.stringify(req.body)
       const client = await pool.connect()
